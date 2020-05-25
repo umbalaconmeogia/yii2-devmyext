@@ -28,7 +28,7 @@ This is how to fix bug and contribute code to [bupy7/yii2-pages](https://github.
   </pre>
 * Create a branch to change the code
   ```shell
-  git checkout -b workWithPostgreAndSqlite
+  git checkout -b migrationForPostgres
   ```
 
 ### Add yii2-pages to yii2-devmyext application
@@ -110,4 +110,16 @@ This is how to fix bug and contribute code to [bupy7/yii2-pages](https://github.
 
 ### Add the code change
 
+* Add the code change (in this case, change the yii2-pages migration code)
+* Commit code and push to fork
+  ```shell
+  git add .
+  git commit -m "Fix default value of boolean field in migration"
+  git push --set-upstream origin migrationForPostgres
+  ```
+
 ### Make pull request
+
+* Open [my fork of yii2-pages](https://github.com/umbalaconmeogia/yii2-pages), click `New pull request` button.
+* Select `compare: migrationForPostgres`, click `Create pull request` button.
+* Fill in comment and click click `Create pull request` button again.
