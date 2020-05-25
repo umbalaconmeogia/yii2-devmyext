@@ -14,7 +14,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'devmyext-kdfowi323',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -34,23 +34,58 @@ $config = [
             'useFileTransport' => true,
         ],
         'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'exportInterval' => 1,
+                    'levels' => ['error', 'warning', 'info', 'trace'],
+                    'logVars' => [],
+                    'except' => ['yii\db\*'],
+                ],
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning', 'info', 'trace'],
+                    'logVars' => [],
+                    'categories' => ['yii\db\*'],
+                    'logFile' => '@app/runtime/logs/sql.log',
                 ],
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            // 'showScriptName' => false,
             'rules' => [
+                'pages/<page:[\w-]+>' => 'pages/default/index',
             ],
         ],
-        */
+    ],
+    'modules' => [
+        'pages' => [
+            'class' => 'bupy7\pages\Module',
+            // 'pathToImages' => '@webroot/images',
+            // 'urlToImages' => '@web/images',
+            // 'pathToFiles' => '@webroot/files',
+            // 'urlToFiles' => '@web/files',
+            // 'uploadImage' => true,
+            // 'uploadFile' => true,
+            // 'addImage' => true,
+            // 'addFile' => true,
+            'controllerMap' => [
+                'manager' => [
+                    'class' => 'bupy7\pages\controllers\ManagerController',
+                    'as access' => [
+                        'class' => 'yii\filters\AccessControl',
+                        'rules' => [
+                            [
+                                'allow' => true,
+                                'roles' => ['@'],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];

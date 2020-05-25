@@ -35,6 +35,9 @@ $config = [
         ],
     ],
     */
+    'modules' => [
+        'pages' => 'bupy7\pages\Module',
+    ],
 ];
 
 if (YII_ENV_DEV) {
