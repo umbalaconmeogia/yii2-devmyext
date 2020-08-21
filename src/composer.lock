@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "194e808712d1c1192b710c0fdbee36ce",
+    "content-hash": "81a676a91591277b284de1a6a8122d89",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:twbs/bootstrap.git",
+                "url": "https://github.com/twbs/bootstrap.git",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
@@ -32,7 +32,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -53,7 +53,7 @@
             "version": "3.4.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
+                "url": "https://github.com/jquery/jquery-dist.git",
                 "reference": "15bc73803f76bc53b654b9fdbbbc096f56d7c03d"
             },
             "dist": {
@@ -71,7 +71,7 @@
             "version": "v1.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bestiejs/punycode.js.git",
+                "url": "git@github.com:bestiejs/punycode.js.git",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "dist": {
@@ -689,6 +689,31 @@
                 "shim"
             ],
             "time": "2020-02-27T09:26:54+00:00"
+        },
+        {
+            "name": "umbalaconmeogia/yii2-jars6",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../yii2-jars6",
+                "reference": "9712eebe679f16413f9aab5232a9a02131f39732"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "umbalaconmeogia\\jars6\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tran Trung Thanh",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Yii2 module to manage expenses."
         },
         {
             "name": "vova07/yii2-imperavi-widget",
@@ -4243,7 +4268,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "bupy7/yii2-pages": 20
+        "bupy7/yii2-pages": 20,
+        "umbalaconmeogia/yii2-jars6": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

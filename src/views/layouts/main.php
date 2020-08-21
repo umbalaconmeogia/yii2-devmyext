@@ -45,6 +45,7 @@ AppAsset::register($this);
                     ['label' => 'Manage', 'url' => ['/pages/manager/index']],
                 ],
             ],
+            ['label' => '6 jars', 'url' => ['/jars6/expense/index']],
             // ['label' => 'Home', 'url' => ['/site/index']],
             // ['label' => 'About', 'url' => ['/site/about']],
             // ['label' => 'Contact', 'url' => ['/site/contact']],

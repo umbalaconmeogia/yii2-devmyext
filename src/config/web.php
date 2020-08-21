@@ -86,6 +86,9 @@ $config = [
                 ],
             ],
         ],
+        'jars6' => [
+            'class' => 'umbalaconmeogia\jars6\Module',
+        ],
     ],
     'params' => $params,
 ];
