@@ -46,6 +46,7 @@ AppAsset::register($this);
                 ],
             ],
             ['label' => '6 jars', 'url' => ['/jars6/expense/index']],
+            ['label' => 'i18n', 'url' => ['/translation-manager']],
             // ['label' => 'Home', 'url' => ['/site/index']],
             // ['label' => 'About', 'url' => ['/site/about']],
             // ['label' => 'Contact', 'url' => ['/site/contact']],

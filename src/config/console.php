@@ -6,7 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'translation-manager'],
     'controllerNamespace' => 'app\commands',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -21,7 +21,17 @@ $config = [
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'exportInterval' => 1,
+                    'levels' => ['error', 'warning', 'info', 'trace'],
+                    'logVars' => [],
+                    'except' => ['yii\db\*'],
+                ],
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['error', 'warning', 'info', 'trace'],
+                    'logVars' => [],
+                    'categories' => ['yii\db\*'],
+                    'logFile' => '@app/runtime/logs/sql.log',
                 ],
             ],
         ],
@@ -37,6 +47,8 @@ $config = [
     */
     'modules' => [
         'pages' => 'bupy7\pages\Module',
+        'jars6' => 'umbalaconmeogia\jars6\Module',
+        'translation-manager' => 'umbalaconmeogia\translationmanager\Module',
     ],
 ];
 

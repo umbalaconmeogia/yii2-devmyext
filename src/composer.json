@@ -19,6 +19,7 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "bupy7/yii2-pages": "@dev",
+        "umbalaconmeogia/yii2-translation-manager": "@dev",
         "umbalaconmeogia/yii2-jars6": "@dev"
     },
     "require-dev": {
@@ -72,6 +73,11 @@
 		{
             "type": "path",
             "url": "../../yii2-pages",
+            "symlink": true
+        },
+		{
+            "type": "path",
+            "url": "../../yii2-translation-manager",
             "symlink": true
         },
 		{

@@ -7,6 +7,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ja',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -52,11 +53,25 @@ $config = [
             ],
         ],
         'db' => $db,
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            // 'showScriptName' => false,
-            'rules' => [
-                'pages/<page:[\w-]+>' => 'pages/default/index',
+        // 'urlManager' => [
+        //     'enablePrettyUrl' => true,
+        //     // 'showScriptName' => false,
+        //     'rules' => [
+        //         'pages/<page:[\w-]+>' => 'pages/default/index',
+        //     ],
+        // ],
+        'i18n' => [
+            'translations' => [
+                'yii*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@vendor/yiisoft/yii2/messages',
+                ],
+                'i18nui' => [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    'forceTranslation'=>true,
+                    //'enableCaching' => false,
+                    //'cachingDuration' => 3600,
+                ],
             ],
         ],
     ],
@@ -88,6 +103,15 @@ $config = [
         ],
         'jars6' => [
             'class' => 'umbalaconmeogia\jars6\Module',
+        ],
+        'translation-manager' => [
+            'class' => 'umbalaconmeogia\translationmanager\Module',
+            'languages' => ['en', 'ja', 'vi'], // Any languages that you want to use
+            'messageCategories' => ['app', 'i18nui'],
+        ],
+        'translate-manager' => [
+            'class' => 'wokster\translationmanager\TranslationManager',
+            'languages' => ['en','vi','ja'],
         ],
     ],
     'params' => $params,

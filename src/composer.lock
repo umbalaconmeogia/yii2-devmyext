@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81a676a91591277b284de1a6a8122d89",
+    "content-hash": "78109f3548fe823f22a2dcaee4f1d977",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -714,6 +714,41 @@
                 }
             ],
             "description": "Yii2 module to manage expenses."
+        },
+        {
+            "name": "umbalaconmeogia/yii2-translation-manager",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../yii2-translation-manager",
+                "reference": "b9c1047a5dc085947b6c5278c1880dd259793901"
+            },
+            "require": {
+                "yiisoft/yii2": ">=2.0.6"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "umbalaconmeogia\\translationmanager\\": ""
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Maksym Tymofeiev",
+                    "email": "wokster@list.ru"
+                }
+            ],
+            "description": "Fork of wokster/yii2-translation-manager by Maksym Tymofeiev. CRUD for storage and editing of translations in a database. Works with a common Yii2 solution (yii i18n DbMessageSource)",
+            "keywords": [
+                "db",
+                "extension",
+                "manager",
+                "translation",
+                "yii2"
+            ]
         },
         {
             "name": "vova07/yii2-imperavi-widget",
@@ -2478,6 +2513,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
@@ -4269,6 +4305,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "bupy7/yii2-pages": 20,
+        "umbalaconmeogia/yii2-translation-manager": 20,
         "umbalaconmeogia/yii2-jars6": 20
     },
     "prefer-stable": false,
