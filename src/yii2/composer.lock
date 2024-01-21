@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a668d05b6af21aa64f436ae23d949c7",
+    "content-hash": "b17154cd15eb8f657e9befa19dcf3525",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -1647,6 +1647,42 @@
                 "i18n",
                 "manager",
                 "translation",
+                "yii2"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "umbalaconmeogia/yii2-simple-data-system",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../../../yii2-simple-data-system",
+                "reference": "4e0f57f8dc9ae49acff7bd45c7cfad9d4b4ce427"
+            },
+            "require": {
+                "umbalaconmeogia/yii2-batsg": "*",
+                "yiisoft/yii2": ">=2.0.6"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "umbalaconmeogia\\simpledatasystem\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tran Trung Thanh",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An easy system to define data object and manipulate data",
+            "keywords": [
+                "extension",
                 "yii2"
             ],
             "transport-options": {
@@ -5937,7 +5973,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "umbalaconmeogia/yii2-batsg": 20,
-        "umbalaconmeogia/yii2-systemuser": 20
+        "umbalaconmeogia/yii2-systemuser": 20,
+        "umbalaconmeogia/yii2-i18nui": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -22,7 +22,8 @@
         "giannisdag/yii2-check-login-attempts": "*",
         "umbalaconmeogia/yii2-batsg": "dev-master",
         "umbalaconmeogia/yii2-systemuser": "dev-main",
-        "umbalaconmeogia/yii2-i18nui": "dev-main"
+        "umbalaconmeogia/yii2-i18nui": "dev-main",
+        "umbalaconmeogia/yii2-simple-data-system": "dev-main"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -76,6 +77,11 @@
 		{
             "type": "path",
             "url": "../../../yii2-timezone",
+            "symlink": true
+        },
+		{
+            "type": "path",
+            "url": "../../../yii2-simple-data-system",
             "symlink": true
         },
 		{

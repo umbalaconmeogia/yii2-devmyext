@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../yii2-simple-data-system"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../yii2-i18nui"
+		}
+	],
+	"settings": {}
+}
